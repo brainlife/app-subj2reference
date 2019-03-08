@@ -6,7 +6,7 @@ set -e
 #roisBL=$(jq -r .rois config.json)
 rois=$(jq -r .rois config.json)
 SUBBRAIN=$(jq -r .t1 config.json)
-SUBMASK=$(jq -r .mask config.json)
+
 echo "$SUBBRAIN"
 #if [ ! -z "$roisBL" ];
 #then
@@ -18,8 +18,7 @@ echo "$SUBBRAIN"
 #rois=wget(roisWeb)
 #fi
 
-MNI=/HCPpipelines/global/templates/MNI152_T1_1mm_brain.nii.gz
-MSK=/HCPpipelines/global/templates/MNI152_T1_1mm_brain_mask.nii.gz
+MNI=/atlas/mni_icbm152_nlin_asym_09c/mni_icbm152_t1_tal_nlin_asym_09c.nii
 
 #MNI=/N/dc2/projects/lifebid/hayashis/forbrent/prf/MNI152_T1_2mm_brain_mask_dil.nii.gz
 #MSK=/N/dc2/projects/lifebid/hayashis/forbrent/prf/MNI152_T1_2mm.nii.gz
@@ -37,7 +36,7 @@ MSK=/HCPpipelines/global/templates/MNI152_T1_1mm_brain_mask.nii.gz
 
 ## compute the registration
 echo "Computing linear / non-linear alignment of input brain to MNI space..."
-antsRegistration --dimensionality 3 --float 0 -x [$MSK,$SUBMASK] \
+antsRegistration --dimensionality 3 \
 		 --output [t1_to_mni_,t1_to_mni_Warped.nii.gz] \
 		 --interpolation Linear \
 		 --winsorize-image-intensities [0.005,0.995] \
