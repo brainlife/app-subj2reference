@@ -27,15 +27,15 @@ TBA
 
 ### Inputs
 
--[anat/t1w](https://brainlife.io/datatypes/58c33bcee13a50849b25879a) - the T1 anatomy for this subject
+- [anat/t1w](https://brainlife.io/datatypes/58c33bcee13a50849b25879a) - the T1 anatomy for this subject
 
--[mask [brain]](https://brainlife.io/datatypes/5a281aee2c214c9ba83ce620) - the brain mask for this subjet
+- [mask [brain]](https://brainlife.io/datatypes/5a281aee2c214c9ba83ce620) - the brain mask for this subjet
 
-- [ROIS] - The ROIS that you would like to be warped to the reference space (i.e. MNI)
+- [ROIS](https://brainlife.io/datatype/5be9ea0315a8683a39a1ebd9) - The ROIS that you would like to be warped to the reference space (i.e. MNI)
 
 ### On Brainlife.io
 
-Visit [this site](https://doi.org/10.25663/brainlife.app.169) to run this app on the brainlife.io platform.  Minimally requires a [tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549).  Can also be augmented with a [LiFE input](https://brainlife.io/datatype/58d15eaee13a50849b258844) and/or a [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) object to perform statistical analyes relevant to the [LiFE fit](https://dx.doi.org/10.1038%2Fnmeth.3098) and/or [segmentation](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).
+Visit [this site](https://doi.org/10.25663/brainlife.app.169) to run this app on the brainlife.io platform.
 
 ### Running Locally (on your machine) using singularity & docker
 
