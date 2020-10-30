@@ -1,5 +1,0 @@
-{
-   "t1": "/N/u/hayashis/Carbonate/test/dan-roi/proj-5c33a141836af601cc85858d/sub-200008/dt-neuro-anat-t1w.tag-acpc_aligned.tag-brain_extracted.id-5c3fc9b09e2d8b004e2614de/t1.nii.gz",
-   "mask": "/N/u/hayashis/Carbonate/test/dan-roi/proj-5c33a141836af601cc85858d/sub-200008/dt-neuro-mask.id-5c425c5608dc200052b5cb0a/mask.nii.gz",
-   "rois": "/N/u/hayashis/Carbonate/test/dan-roi/proj-5c33a141836af601cc85858d/sub-200008/dt-neuro-rois.id-5c4860e308dc200052b5d183/rois"
-}
