@@ -30,7 +30,7 @@ NOTE: This app can easily be repurposed by changing the target nifti [here](http
 
 ### Inputs
 
-- [anat/t1w](https://brainlife.io/datatypes/58c33bcee13a50849b25879a) - the T1 anatomy for this subject
+- [anat/t1w](https://brainlife.io/datatypes/58c33bcee13a50849b25879a) - the T1 anatomy for this subject.  !brain_extracted tag is due to use of [specific (non-skull-stripped) t1 atlas](https://github.com/brainlife/app-subj2reference/blob/a11276b3fc20bcd6099a1c2e333232d80ce9c0ef/CoordTransform.sh#L21)
 
 - [mask [brain]](https://brainlife.io/datatypes/5a281aee2c214c9ba83ce620) - the brain mask for this subjet
 
