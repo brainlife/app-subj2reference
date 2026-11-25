@@ -14,19 +14,11 @@
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
-> **Warps a set of subject-space ROIs to MNI space (ICBM152 2009c) using an ANTs SyN registration of the subject's T1-weighted image.**
+**Warps a set of subject-space ROIs to MNI space (ICBM152 2009c) using an ANTs SyN registration of the subject's T1-weighted image.**
 
 Registers the subject T1 to the MNI ICBM152 2009c nonlinear asymmetric template with ANTs (rigid, affine and SyN), then applies the warp to every .nii.gz file in the input directory with antsApplyTransforms. The T1 should not be skull-stripped because the template includes the skull. The brain mask input is not used by the script. Use it to bring ROIs or endpoint maps from several subjects into a common space for group analysis.
 
-| | |
-|---|---|
-| 📥 **Inputs** | `neuro/anat/t1w` · `neuro/mask` · `neuro/rois` |
-| 📤 **Outputs** | `neuro/rois` |
-| 🐳 **Container** | `brainlife/ants:2.2.0.1` |
-| ⚙️ **Resources** | 8 CPUs · 18 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.169](https://doi.org/10.25663/brainlife.app.169) |
-
-#### 📥 Inputs
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.169](https://doi.org/10.25663/brainlife.app.169)
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -34,11 +26,14 @@ Registers the subject T1 to the MNI ICBM152 2009c nonlinear asymmetric template 
 | `mask` | `neuro/mask` (brain) | yes | Brain mask of the subject (required by the registry but not read by the script). |
 | `rois` | `neuro/rois` | yes | ROIs in subject space (NIfTI files). |
 
-#### 📤 Outputs
-
 | Output | Datatype | Description |
 |---|---|---|
 | `output` | `neuro/rois` | ROIs warped to MNI space, one file per input ROI with the same names. |
+
+Runtime: container `brainlife/ants:2.2.0.1`; 8 CPUs; 18 h walltime.
+
+Please cite:
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
 <!-- brainlife-app:end -->
 
